@@ -142,28 +142,60 @@ Understanding projectile motion has widespread applications across multiple fiel
 
 ![alt text](image.png)
 
-
-```python import numpy as np
+```python
+import numpy as np
 import matplotlib.pyplot as plt
 
-def projectile_range(angle, v0, g=9.81):
-    """Compute the range of a projectile given an angle and initial velocity."""
+def compute_projectile_range(angle, v0, g=9.81):
+    """
+    Calculate the range of a projectile based on launch angle and initial velocity.
+    
+    Parameters:
+    angle : float
+        Launch angle in degrees.
+    v0 : float
+        Initial velocity (m/s).
+    g : float
+        Gravitational acceleration (m/s^2). Default is Earth's gravity.
+    
+    Returns:
+    float
+        Projectile range in meters.
+    """
     angle_rad = np.radians(angle)
     return (v0**2 * np.sin(2 * angle_rad)) / g
 
-def simulate_projectile(v0=20, angles=np.linspace(10, 80, 10), g=9.81):
-    """Simulates projectile motion and plots range vs. launch angle."""
-    ranges = [projectile_range(angle, v0, g) for angle in angles]
+def simulate_and_plot_projectile(v0=20, angles=None, g=9.81):
+    """
+    Simulates projectile motion for a range of angles and plots the results.
     
-    plt.figure(figsize=(8, 5))
-    plt.plot(angles, ranges, marker='o', linestyle='-')
-    plt.xlabel("Launch Angle (degrees)")
-    plt.ylabel("Range (meters)")
-    plt.title(f"Projectile Range vs. Angle (Initial Velocity = {v0} m/s)")
-    plt.grid()
+    Parameters:
+    v0 : float
+        Initial velocity (m/s).
+    angles : array-like
+        List or array of launch angles in degrees. Default is np.linspace(10, 80, 10).
+    g : float
+        Gravitational acceleration (m/s^2). Default is Earth's gravity.
+    """
+    if angles is None:
+        angles = np.linspace(10, 80, 10)
+    
+    # Calculate ranges for all specified angles
+    ranges = [compute_projectile_range(angle, v0, g) for angle in angles]
+    
+    # Plot the results
+    plt.figure(figsize=(10, 6))
+    plt.plot(angles, ranges, marker='o', linestyle='-', color='blue')
+    plt.xlabel("Launch Angle (degrees)", fontsize=12)
+    plt.ylabel("Range (meters)", fontsize=12)
+    plt.title(f"Projectile Range vs. Launch Angle\n(Initial Velocity = {v0} m/s, Angles = {len(angles)})", fontsize=14)
+    plt.grid(True, linestyle='--', alpha=0.7)
+    plt.tight_layout()
     plt.show()
 
-simulate_projectile(v0=30)
+if __name__ == "__main__":
+    # Example of usage
+    simulate_and_plot_projectile(v0=30)
 ```
 
  

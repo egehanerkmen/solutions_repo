@@ -280,53 +280,26 @@ $$R = \frac{v_0^2\sin(2\theta)}{g}\]</div>
 <hr/>
 <h1 id="pythonplot">Python/Plot</h1>
 <p><img alt="alt text" src="../image.png"/></p>
-<p>```python
-import numpy as np
+<p>```python import numpy as np
 import matplotlib.pyplot as plt</p>
-<p>def calculate_projectile_range(angle, velocity, gravity=9.81):</p>
-<pre><code>Calculate the range of a projectile given the launch angle, initial velocity, and gravity.
-
-Parameters:
-- angle (float): Launch angle in degrees.
-- velocity (float): Initial velocity in m/s.
-- gravity (float): Gravitational acceleration in m/s^2. Default is 9.81.
-
-Returns:
-- float: The range of the projectile in meters.
-"""
-angle_rad = np.radians(angle)
-return (velocity**2 * np.sin(2 * angle_rad)) / gravity
-</code></pre>
-<p>def simulate_projectile_motion(
-    initial_velocity=20, angle_range=(10, 80), num_angles=10, gravity=9.81
-):
-    """
-    Simulate projectile motion and plot the range as a function of launch angle.</p>
-<pre><code>Parameters:
-- initial_velocity (float): Initial velocity in m/s. Default is 20.
-- angle_range (tuple): Tuple of (min_angle, max_angle) in degrees. Default is (10, 80).
-- num_angles (int): Number of angles to simulate. Default is 10.
-- gravity (float): Gravitational acceleration in m/s^2. Default is 9.81.
-"""
-angles = np.linspace(angle_range[0], angle_range[1], num_angles)
-ranges = [calculate_projectile_range(angle, initial_velocity, gravity) for angle in angles]
-
-plt.figure(figsize=(10, 6))
-plt.plot(angles, ranges, marker='o', color='b', label='Projectile Range')
-plt.xlabel("Launch Angle (degrees)", fontsize=12)
-plt.ylabel("Range (meters)", fontsize=12)
-plt.title(
-    f"Projectile Range vs. Launch Angle\nInitial Velocity = {initial_velocity} m/s",
-    fontsize=14,
-)
-plt.grid(True, linestyle='--', alpha=0.6)
-plt.legend(fontsize=10)
-plt.tight_layout()
+<p>def projectile_range(angle, v0, g=9.81):
+    """Compute the range of a projectile given an angle and initial velocity."""
+    angle_rad = np.radians(angle)
+    return (v0**2 * np.sin(2 * angle_rad)) / g</p>
+<p>def simulate_projectile(v0=20, angles=np.linspace(10, 80, 10), g=9.81):
+    """Simulates projectile motion and plots range vs. launch angle."""
+    ranges = [projectile_range(angle, v0, g) for angle in angles]</p>
+<pre><code>plt.figure(figsize=(8, 5))
+plt.plot(angles, ranges, marker='o', linestyle='-')
+plt.xlabel("Launch Angle (degrees)")
+plt.ylabel("Range (meters)")
+plt.title(f"Projectile Range vs. Angle (Initial Velocity = {v0} m/s)")
+plt.grid()
 plt.show()
 </code></pre>
-<p>simulate_projectile_motion(initial_velocity=30, angle_range=(15, 75), num_angles=20)
-```
-link:  <a href="https://colab.research.google.com/drive/1J16l-L0JT2h0vWj8SESZdBAcCqHOvnfE?authuser=0#scrollTo=1HgBZRL-WP5u">colab</a></p>
+<p>simulate_projectile(v0=30)
+```</p>
+<p>link:  <a href="https://colab.research.google.com/drive/1J16l-L0JT2h0vWj8SESZdBAcCqHOvnfE?authuser=0#scrollTo=1HgBZRL-WP5u">colab</a></p>
 </div>
 </div><footer>
 <div aria-label="Footer Navigation" class="rst-footer-buttons" role="navigation">

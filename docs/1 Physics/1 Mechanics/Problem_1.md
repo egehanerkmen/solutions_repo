@@ -147,7 +147,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 def calculate_projectile_range(angle, velocity, gravity=9.81):
-    """
+    
     Calculate the range of a projectile given the launch angle, initial velocity, and gravity.
 
     Parameters:
@@ -188,8 +188,6 @@ def simulate_projectile_motion(
     plt.legend(fontsize=10)
     plt.tight_layout()
     plt.show()
-
-# Example usage
 simulate_projectile_motion(initial_velocity=30, angle_range=(15, 75), num_angles=20)
 ```
 link:  [colab](https://colab.research.google.com/drive/1J16l-L0JT2h0vWj8SESZdBAcCqHOvnfE?authuser=0#scrollTo=1HgBZRL-WP5u)

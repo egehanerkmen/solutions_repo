@@ -199,7 +199,6 @@ These transitions are closely linked to:
 
 # Practical Applications of Forced Damped Pendulum
 
-# Markdown notes
 
 # 🔧 3. Practical Applications
 
@@ -303,24 +302,33 @@ These insights guide design and safety in engineering.
 
 # Python/Plot
 
-![alt text](image.png)
+![image](https://github.com/user-attachments/assets/2fe8eaf2-a9b1-41c3-bc70-65f61b26bbec)
 ---
-![alt text](image-1.png)
+![image](https://github.com/user-attachments/assets/a0341379-8002-40f5-ae59-56ee2206b6e1)
+
 ---
-![alt text](image-2.png)
+![image](https://github.com/user-attachments/assets/0e06cc97-fb7a-4c17-9a2b-c17cabbdb1aa)
+
 ---
-![alt text](image-4.png)
+![image](https://github.com/user-attachments/assets/a3efe2ff-e621-4509-bd9c-a650f552c473)
+
 ---
-![alt text](image-5.png)
+![image](https://github.com/user-attachments/assets/a3873389-6110-43d6-8d0d-de902dc65a9e)
+
 ---
-![alt text](image-6.png)
+![image](https://github.com/user-attachments/assets/08ecd99a-c6fc-4573-98d3-ed16c992101c)
+
 ---
-![alt text](image-7.png)
+![image](https://github.com/user-attachments/assets/496af71f-90eb-4549-b068-a5e1d7f984d3)
+
 ---
-![alt text](image-8.png)
+![image](https://github.com/user-attachments/assets/d098a7e2-0174-464e-a108-e0ab56504d2d)
+
 ---
-![alt text](image-9.png)
+![image](https://github.com/user-attachments/assets/099a9154-dc0a-42d4-8259-5594588eab2a)
+
 ---
+![image](https://github.com/user-attachments/assets/b4d0dd36-9caf-46bc-b029-11e8764d0d6f)
 
 
 ```python

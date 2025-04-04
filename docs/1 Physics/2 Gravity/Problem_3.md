@@ -99,6 +99,7 @@ This theoretical background lays the foundation for numerical simulations of pay
   ensures that the payload escapes Earth's gravitational influence.
 
 This mathematical formulation establishes the foundation for numerical simulations of payload motion.
+
 ---
 
 ## Numerical Simulation

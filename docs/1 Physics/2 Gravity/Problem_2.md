@@ -219,7 +219,6 @@ Where:
   - \( R \): Radius of the celestial body
 
 
-
 > These expressions form the theoretical basis for space travel and trajectory planning.
 ---
 

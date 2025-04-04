@@ -1,4 +1,4 @@
-![Ekran görüntüsü 2025-04-04 102719](https://github.com/user-attachments/assets/a154473d-f2c5-4ddb-9fa6-16d8813b58d5)# Problem 3
+## Problem 3
 
 ## Theoretical Foundation
 

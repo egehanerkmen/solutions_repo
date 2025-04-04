@@ -201,12 +201,23 @@ Where:
 ### 📘 Summary of Results
 
 - **First Cosmic Velocity**:
-  
+
   $$v = \sqrt{\frac{GM}{R}}$$
 
+  Where:
+  - \( G \): Gravitational constant
+  - \( M \): Mass of the celestial body
+  - \( R \): Radius of the celestial body
+
 - **Second Cosmic Velocity**:
-  
+
   $$v = \sqrt{\frac{2GM}{R}}$$
+
+  Where:
+  - \( G \): Gravitational constant
+  - \( M \): Mass of the celestial body
+  - \( R \): Radius of the celestial body
+
 
 
 > These expressions form the theoretical basis for space travel and trajectory planning.

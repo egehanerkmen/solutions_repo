@@ -58,7 +58,6 @@
 This theoretical background lays the foundation for numerical simulations of payload trajectories.
 ---
 
-
 ## Mathematical Formulation
 
 ### Equations of Motion for a Payload under Earth's Gravity
@@ -109,29 +108,29 @@ This mathematical formulation establishes the foundation for numerical simulatio
 We solve the equations of motion numerically using an appropriate method such as the Runge-Kutta method. The equations of motion are:
 
 $$
-m \frac{d^2 \mathbf{r}}{dt^2} = - G \frac{M_E m}{r^2} \hat{r}
+m\frac{d^2 \mathbf{r}}{dt^2}=-G\frac{M_E m}{r^2}\hat{r}
 $$
 
 This simplifies to:
 
 $$
-\frac{d^2 \mathbf{r}}{dt^2} = - G \frac{M_E}{r^2} \hat{r}
+\frac{d^2 \mathbf{r}}{dt^2}=-G\frac{M_E}{r^2}\hat{r}
 $$
 
 To implement this, we break it down into first-order differential equations by defining velocity as:
 
 $$
-\mathbf{v} = \frac{d \mathbf{r}}{dt}
+\mathbf{v}=\frac{d \mathbf{r}}{dt}
 $$
 
 Thus, we can write the system of equations as:
 
 $$
-\frac{d \mathbf{r}}{dt} = \mathbf{v}
+\frac{d \mathbf{r}}{dt}=\mathbf{v}
 $$
 
 $$
-\frac{d \mathbf{v}}{dt} = - G \frac{M_E}{r^2} \hat{r}
+\frac{d \mathbf{v}}{dt}=-G\frac{M_E}{r^2}\hat{r}
 $$
 
 ### Use Numerical Methods (e.g., Runge-Kutta) for Trajectory Calculations
@@ -141,11 +140,11 @@ $$
 Let the system of differential equations be represented as:
 
 $$
-\mathbf{r}' = \mathbf{v}
+\mathbf{r}'=\mathbf{v}
 $$
 
 $$
-\mathbf{v}' = - G \frac{M_E}{r^2} \hat{r}
+\mathbf{v}'=-G\frac{M_E}{r^2}\hat{r}
 $$
 
 The Runge-Kutta method will numerically integrate these equations step-by-step, providing the trajectory of the payload over time.
@@ -157,20 +156,22 @@ We consider various initial conditions, such as:
 - Initial position:
 
 $$
-\mathbf{r_0} = (x_0, y_0, z_0)
+\mathbf{r_0}=(x_0,y_0,z_0)
 $$
 
 - Initial velocity:
 
 $$
-\mathbf{v_0} = (v_{x0}, v_{y0}, v_{z0})
+\mathbf{v_0}=(v_{x0},v_{y0},v_{z0})
 $$
 
 The trajectory depends on the magnitude and direction of the initial velocity and the altitude:
 
 $$
-r_0 = R_E + h
+r_0=R_E+h
 $$
+
+---
 
 ### Python Implementation
 

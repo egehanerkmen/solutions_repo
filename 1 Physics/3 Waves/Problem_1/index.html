@@ -6,13 +6,13 @@
 <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <link href="../../../img/favicon.ico" rel="shortcut icon"/>
-<title>Problem 1 - Physics and Mathematics</title>
+<title>🧪 Waves: Interference Patterns on a Water Surface - Physics and Mathematics</title>
 <link href="../../../css/theme.css" rel="stylesheet"/>
 <link href="../../../css/theme_extra.css" rel="stylesheet"/>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" rel="stylesheet"/>
 <script>
         // Current page data
-        var mkdocs_page_name = "Problem 1";
+        var mkdocs_page_name = "\ud83e\uddea Waves: Interference Patterns on a Water Surface";
         var mkdocs_page_input_path = "1 Physics/3 Waves/Problem_1.md";
         var mkdocs_page_url = null;
       </script>
@@ -64,8 +64,28 @@
 </li>
 <li class="toctree-l1 current"><a class="reference internal current">3 Waves</a>
 <ul class="current">
-<li class="toctree-l2 current"><a class="reference internal current" href="#">Problem 1</a>
+<li class="toctree-l2 current"><a class="reference internal current" href="#">🧪 Waves: Interference Patterns on a Water Surface</a>
 <ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="#step-1-choose-a-regular-polygon">🎯 Step 1: Choose a Regular Polygon</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#step-2-determine-coordinates-of-vertices">🧮 Step 2: Determine Coordinates of Vertices</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#where-i012dotsn-1">where \(i=0,1,2,\dots,N-1\)</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#step-3-define-wave-parameters">🌊 Step 3: Define Wave Parameters</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#step-4-formulate-individual-wave-equations">🔁 Step 4: Formulate Individual Wave Equations</a>
+<ul>
+<li class="toctree-l4"><a class="reference internal" href="#step-5-apply-superposition-principle">🔬 Step 5: Apply Superposition Principle</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#step-6-simulate-the-displacement-over-a-2d-grid">🖥️ Step 6: Simulate the Displacement Over a 2D Grid</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#step-7-visualize-and-analyze-interference-patternsplot">🎨 Step 7: Visualize and Analyze Interference Patterns/Plot</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#_1"></a>
+</li>
 </ul>
 </li>
 </ul>
@@ -163,7 +183,7 @@
 <li><a aria-label="Docs" class="icon icon-home" href="../../.."></a></li>
 <li class="breadcrumb-item">1 Physics</li>
 <li class="breadcrumb-item">3 Waves</li>
-<li class="breadcrumb-item active">Problem 1</li>
+<li class="breadcrumb-item active">🧪 Waves: Interference Patterns on a Water Surface</li>
 <li class="wy-breadcrumbs-aside">
 </li>
 </ul>
@@ -171,7 +191,152 @@
 </div>
 <div class="document" itemscope="itemscope" itemtype="http://schema.org/Article" role="main">
 <div class="section" itemprop="articleBody">
-<h1 id="problem-1">Problem 1</h1>
+<h1 id="waves-interference-patterns-on-a-water-surface">🧪 Waves: Interference Patterns on a Water Surface</h1>
+<h2 id="step-1-choose-a-regular-polygon">🎯 Step 1: Choose a Regular Polygon</h2>
+<p>To analyze wave interference from multiple coherent sources, we begin by selecting a <strong>regular polygon</strong>. Each vertex of this polygon acts as a <strong>point wave source</strong> on a two-dimensional water surface.</p>
+<ul>
+<li>We choose a <strong>regular pentagon</strong> (5 sides).</li>
+<li>The polygon is centered at the origin <span class="arithmatex">\((0,0)\)</span>.</li>
+<li>The radius <span class="arithmatex">\(R\)</span> of the circumcircle defines the distance from the center to each vertex.</li>
+</ul>
+<blockquote>
+<p>This setup ensures symmetrical placement of sources and allows for clear observation of interference patterns.</p>
+</blockquote>
+<hr/>
+<h2 id="step-2-determine-coordinates-of-vertices">🧮 Step 2: Determine Coordinates of Vertices</h2>
+<p>To calculate the positions of the wave sources located at the vertices, we use the formula for a regular polygon inscribed in a circle:</p>
+<ul>
+<li>Let the number of vertices be <span class="arithmatex">\(N\)</span>.</li>
+<li>Each vertex is positioned at:</li>
+</ul>
+<div class="arithmatex">\[
+(x_i,y_i)=\left(R\cos\left(\frac{2\pi i}{N}\right),\ R\sin\left(\frac{2\pi i}{N}\right)\right)
+\]</div>
+<h2 id="where-i012dotsn-1">where <span class="arithmatex">\(i=0,1,2,\dots,N-1\)</span></h2>
+<p><img alt="image" src="https://github.com/user-attachments/assets/f733dc26-8cf0-41fb-a606-58e001b9751f"/></p>
+<hr/>
+<h2 id="step-3-define-wave-parameters">🌊 Step 3: Define Wave Parameters</h2>
+<p>Each wave emitted from the sources is described by:</p>
+<ul>
+<li><strong>Amplitude</strong>: <span class="arithmatex">\(A\)</span></li>
+<li><strong>Wavelength</strong>: <span class="arithmatex">\(\lambda\)</span></li>
+<li><strong>Frequency</strong>: <span class="arithmatex">\(f\)</span></li>
+<li><strong>Initial Phase</strong>: <span class="arithmatex">\(\phi\)</span></li>
+</ul>
+<p>From these, we compute:</p>
+<ul>
+<li>
+<p><strong>Wave number</strong>:
+$$
+k=\frac{2\pi}{\lambda}
+$$</p>
+</li>
+<li>
+<p><strong>Angular frequency</strong>:
+$$
+\omega=2\pi f
+$$</p>
+</li>
+</ul>
+<hr/>
+<h2 id="step-4-formulate-individual-wave-equations">🔁 Step 4: Formulate Individual Wave Equations</h2>
+<p>Each wave <span class="arithmatex">\(\eta_i(x,y,t)\)</span> emitted from the source located at <span class="arithmatex">\((x_i,y_i)\)</span> is given by:</p>
+<div class="arithmatex">\[
+\eta_i(x,y,t)=\frac{A}{\sqrt{r_i}}\cdot\cos(kr_i-\omega t+\phi)
+\]</div>
+<p>where:</p>
+<div class="arithmatex">\[
+r_i=\sqrt{(x-x_i)^2+(y-y_i)^2}
+\]</div>
+<ul>
+<li>This expression models <strong>circular wavefronts</strong> on the water surface.</li>
+<li>The <span class="arithmatex">\(1/\sqrt{r_i}\)</span> decay factor reflects the diminishing amplitude with distance.</li>
+</ul>
+<hr/>
+<h3 id="step-5-apply-superposition-principle">🔬 Step 5: Apply Superposition Principle</h3>
+<p>According to the principle of superposition, the total wave displacement at any point <span class="arithmatex">\((x,y)\)</span> and time <span class="arithmatex">\(t\)</span> is the sum of the contributions from all <span class="arithmatex">\(N\)</span> sources:</p>
+<div class="arithmatex">\[
+\eta_{\text{sum}}(x,y,t) = \sum_{i=1}^{N} \eta_i(x,y,t)
+\]</div>
+<p>Where <span class="arithmatex">\(\eta_i(x,y,t)\)</span> is the wave displacement from the <span class="arithmatex">\(i^{th}\)</span> source. This summation accounts for constructive and destructive interference patterns, as the waves combine at each point <span class="arithmatex">\((x,y)\)</span> based on the phase differences between them. Constructive interference occurs when the waves are in phase, amplifying the displacement, while destructive interference happens when the waves are out of phase, leading to partial or complete cancellation.</p>
+<p>Thus, the total displacement <span class="arithmatex">\(\eta_{\text{sum}}(x,y,t)\)</span> represents the result of wave interactions across the entire system of sources.</p>
+<hr/>
+<h3 id="step-6-simulate-the-displacement-over-a-2d-grid">🖥️ Step 6: Simulate the Displacement Over a 2D Grid</h3>
+<p>To simulate the wave displacement over the water surface, we first define a 2D spatial grid representing the region of interest. Let the grid be defined for <span class="arithmatex">\(x, y \in [-L, L]\)</span>, where <span class="arithmatex">\(L\)</span> is the spatial extent of the grid. A finer grid resolution leads to better visual accuracy but requires more computational resources.</p>
+<ol>
+<li><strong>Define Grid</strong>: </li>
+<li><span class="arithmatex">\(x, y\)</span> are linearly spaced between <span class="arithmatex">\(-L\)</span> and <span class="arithmatex">\(L\)</span>, where <span class="arithmatex">\(L\)</span> is the maximum spatial range.</li>
+<li>
+<p>We use meshgrid functions to create a grid of points at which the displacement will be calculated.</p>
+</li>
+<li>
+<p><strong>Choose a Time Snapshot</strong>:</p>
+</li>
+<li>
+<p>For visualization purposes, we can choose a fixed time <span class="arithmatex">\(t\)</span> (e.g., <span class="arithmatex">\(t=0\)</span>) to compute and observe the wave interference pattern at that specific moment.</p>
+</li>
+<li>
+<p><strong>Evaluate Total Displacement</strong>:</p>
+</li>
+<li>For each grid point <span class="arithmatex">\((x, y)\)</span>, compute the displacement <span class="arithmatex">\(\eta_{\text{sum}}(x,y,t)\)</span> as the sum of displacements from all <span class="arithmatex">\(N\)</span> sources.</li>
+<li>This step involves iterating over all the sources and applying the wave equation for each one.</li>
+</ol>
+<p>This simulation provides us with a matrix of values representing the wave surface at a given time, which can be visualized to study the interference effects.</p>
+<hr/>
+<h3 id="step-7-visualize-and-analyze-interference-patternsplot">🎨 Step 7: Visualize and Analyze Interference Patterns/Plot</h3>
+<h2 id="_1"><img alt="image" src="https://github.com/user-attachments/assets/b8f65312-ba2b-4cf9-9a37-0624304765bd"/></h2>
+<pre><code class="language-python">import numpy as np
+import matplotlib.pyplot as plt
+
+# Constants
+A = 1.0      # Amplitude
+lambda_ = 1.0  # Wavelength
+f = 1.0      # Frequency
+phi = 0       # Initial Phase
+R = 5.0      # Radius of the polygon
+L = 10       # Grid size limit
+N = 5        # Number of sources (for pentagon)
+
+# Calculate wave number and angular frequency
+k = 2 * np.pi / lambda_
+omega = 2 * np.pi * f
+
+# Coordinates of the sources (vertices of a regular polygon)
+theta = np.linspace(0, 2 * np.pi, N, endpoint=False)
+x_sources = R * np.cos(theta)
+y_sources = R * np.sin(theta)
+
+# Define grid for simulation
+x_vals = np.linspace(-L, L, 400)
+y_vals = np.linspace(-L, L, 400)
+X, Y = np.meshgrid(x_vals, y_vals)
+
+# Function to calculate displacement from one source
+def displacement(x, y, x_i, y_i, A, k, omega, t, phi):
+    r_i = np.sqrt((x - x_i)**2 + (y - y_i)**2)
+    return (A / np.sqrt(r_i)) * np.cos(k * r_i - omega * t + phi)
+
+# Simulate total displacement by summing contributions from all sources
+def total_displacement(X, Y, x_sources, y_sources, A, k, omega, t, phi):
+    eta_sum = np.zeros_like(X)
+    for i in range(len(x_sources)):
+        eta_sum += displacement(X, Y, x_sources[i], y_sources[i], A, k, omega, t, phi)
+    return eta_sum
+
+# Choose a fixed time t = 0 for visualization
+t = 0
+eta_sum = total_displacement(X, Y, x_sources, y_sources, A, k, omega, t, phi)
+
+# Visualize the displacement using contour plot
+plt.figure(figsize=(8, 6))
+plt.contourf(X, Y, eta_sum, levels=100, cmap='RdBu')
+plt.colorbar(label='Displacement')
+plt.title("Interference Pattern: Water Surface Displacement")
+plt.xlabel("X")
+plt.ylabel("Y")
+plt.show()
+</code></pre>
+<hr/>
 </div>
 </div><footer>
 <div aria-label="Footer Navigation" class="rst-footer-buttons" role="navigation">

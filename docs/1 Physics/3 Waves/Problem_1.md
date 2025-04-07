@@ -36,18 +36,24 @@ where $i=0,1,2,\dots,N-1$
 Each wave emitted from the sources is described by:
 
 - **Amplitude**: $A$
+  
 - **Wavelength**: $\lambda$
+  
 - **Frequency**: $f$
+  
 - **Initial Phase**: $\phi$
+  
 
 From these, we compute:
 
 - **Wave number**:
+  
 $$
 k=\frac{2\pi}{\lambda}
 $$
 
 - **Angular frequency**:
+  
 $$
 \omega=2\pi f
 $$

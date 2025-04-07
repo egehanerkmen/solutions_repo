@@ -322,11 +322,12 @@ Kepler's Third Law applies to both, but the shape and speed variation in ellipti
 ---
 # Python/Plot
 
- ![alt text](image.png)
+![image](https://github.com/user-attachments/assets/0b3d5700-7b2f-47b4-b97c-7a37a79d5d1a)
+
  ---
- ![alt text](image-1.png)
+![image](https://github.com/user-attachments/assets/dfe84c27-f310-4247-bfc8-1d6772dd28c8)
+
  ---
- ![alt text](image-2.png)
 
 ```python
  import numpy as np

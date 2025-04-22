@@ -163,5 +163,181 @@ plt.axis("equal")
 plt.grid()
 plt.show()
 ```
+---
+
+# 🧲 Lorentz Force – Parameter Exploration & Visualization
+
+## 3. 🧪 Parameter Exploration
+
+To fully understand the dynamics of charged particle motion, we introduce interactive control over the physical parameters in the Lorentz force equation:
+
+$$
+\mathbf{F} = q\mathbf{E} + q\mathbf{v} \times \mathbf{B}
+$$
+
+---
+
+### 🎛️ Parameters to Explore
+
+- **Electric Field Strength**: $\mathbf{E} = (E_x, E_y, E_z)$  
+  Adjust the intensity and direction of the electric field.
+
+- **Magnetic Field Strength**: $\mathbf{B} = (B_x, B_y, B_z)$  
+  Set uniform or directional magnetic fields.
+
+- **Initial Velocity**: $\mathbf{v}_0 = (v_x, v_y, v_z)$  
+  Define the starting motion of the particle.
+
+- **Particle Properties**:
+  - Charge $q$
+  - Mass $m$
+
+---
+
+### 🧠 Effects of Parameters
+
+- Increasing $E$ leads to linear acceleration in the direction of the field.
+- Increasing $B$ affects the curvature (cyclotron frequency).
+- The ratio $\frac{q}{m}$ plays a crucial role in determining:
+  - Radius of curvature (Larmor radius)
+  - Drift velocity in crossed fields.
+- Initial velocity $\mathbf{v}_0$ sets the nature of the trajectory: linear, spiral, or helical.
+
+---
+
+### 🧮 Python Code – Interactive Parameter Setup
+
+```python
+import numpy as np  # Ensure numpy is imported
+
+# Editable Parameters
+q = 1.0  # Charge (C)
+m = 1.0  # Mass (kg)
+E = np.array([0.0, 1.0, 0.0])  # Electric field vector (V/m)
+B = np.array([0.0, 0.0, 1.0])  # Magnetic field vector (T)
+v = np.array([1.0, 0.0, 0.0])  # Initial velocity (m/s)
+r = np.array([0.0, 0.0, 0.0])  # Initial position (m)
+
+# Time settings
+dt = 0.01
+steps = 1000
+
+trajectory = []
+
+for _ in range(steps):
+    F = q * (E + np.cross(v, B))  # Lorentz force calculation
+    a = F / m  # Acceleration
+    v = v + a * dt  # Velocity update
+    r = r + v * dt  # Position update
+    trajectory.append(r.copy())
+
+trajectory = np.array(trajectory)
+```
+---
+
+# 4. 🧭 Visualization of Particle Motion
+
+![image](https://github.com/user-attachments/assets/efbcc556-d96c-4dc4-a403-a1b1b7791787)
+---
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+
+# Generate dummy trajectory data
+trajectory = np.array([[i, np.sin(i)] for i in np.linspace(0, 10, 100)])
+
+# Plot trajectory
+plt.figure(figsize=(6, 6))
+plt.plot(trajectory[:, 0], trajectory[:, 1], label="Charged Particle Path")
+plt.title("2D Trajectory of Charged Particle")
+plt.xlabel("x (m)")
+plt.ylabel("y (m)")
+plt.grid(True)
+plt.axis("equal")
+plt.legend()
+plt.show()
+```
+---
+
+![image](https://github.com/user-attachments/assets/bd6804de-5069-4944-b051-04bcf750110a)
+---
+
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+from mpl_toolkits.mplot3d import Axes3D  # Ensure correct import
+
+# Example trajectory data (Replace with actual simulation data)
+trajectory = np.array([[i, np.sin(i), np.cos(i)] for i in np.linspace(0, 10, 100)])
+
+# Create figure & 3D axis
+fig = plt.figure(figsize=(8, 6))  # Set figure size for better scaling
+ax = fig.add_subplot(111, projection='3d')
+
+# Plot trajectory
+ax.plot(trajectory[:, 0], trajectory[:, 1], trajectory[:, 2], label="Charged Particle Path")
+
+# Labels & Title
+ax.set_title("3D Trajectory of Charged Particle")
+ax.set_xlabel("x (m)")
+ax.set_ylabel("y (m)")
+ax.set_zlabel("z (m)")
+ax.legend()  # Add legend for clarity
+
+# Show plot
+plt.show()
+```
+---
+## 📐 Physical Concepts
+
+Understanding the motion of a charged particle under electromagnetic fields involves several key physical quantities.
+
+---
+
+### 🔄 Larmor Radius ($r_L$)
+
+The radius of circular motion in a uniform magnetic field is given by:
+
+$$r_L=\frac{mv_\perp}{|q|B}$$
+
+Where:
+- $m$: mass of the particle  
+- $v_\perp$: velocity component **perpendicular** to the magnetic field  
+- $q$: charge of the particle  
+- $B$: magnitude of the magnetic field  
+
+The Larmor radius determines how tightly the particle spirals around the magnetic field lines.
+
+---
+
+### 🔁 Cyclotron Frequency ($\omega_c$)
+
+The angular frequency of the circular motion (also called **gyrofrequency**) is:
+
+$$\omega_c=\frac{|q|B}{m}$$
+
+- Represents how quickly the particle orbits in the magnetic field  
+- Independent of the particle’s velocity  
+
+---
+
+### ✖️ $\mathbf{E} \times \mathbf{B}$ Drift Velocity
+
+When a particle is in **crossed electric and magnetic fields**, it experiences a net drift, independent of charge or mass:
+
+$$\mathbf{v}_{\text{drift}}=\frac{\mathbf{E} \times \mathbf{B}}{B^2}$$
+
+- Direction of drift is perpendicular to both $\mathbf{E}$ and $\mathbf{B}$  
+- The magnitude depends on the strength and orientation of both fields  
+- No net force in the drift direction — the motion is **uniform**  
+
+---
+
+> 🧠 These concepts are fundamental in understanding plasmas, particle traps, and devices like cyclotrons and tokamaks.
+
+
+
+
+
 
 

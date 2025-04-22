@@ -43,13 +43,13 @@ Where:
 
 - **Electric Fields** accelerate particles linearly:
 
-  $$\mathbf{F}_E = q\mathbf{E}$$
+$$\mathbf{F}_E = q\mathbf{E}$$
 
 - **Magnetic Fields** change the direction of motion (not speed):
 
-  $$\mathbf{F}_B = q\mathbf{v} \times \mathbf{B}$$
+$$\mathbf{F}_B = q\mathbf{v} \times \mathbf{B}$$
 
-  Leading to circular or helical trajectories depending on the orientation of $\mathbf{v}$ and $\mathbf{B}$.
+Leading to circular or helical trajectories depending on the orientation of $\mathbf{v}$ and $\mathbf{B}$.
 
 ---
 

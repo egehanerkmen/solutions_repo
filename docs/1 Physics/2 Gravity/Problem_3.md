@@ -6,7 +6,7 @@
 
 - Newton's Law of Universal Gravitation states that any two masses in the universe attract each other with a force given by:
   
-  $$F=G\frac{m_1m_2}{r^2}$$
+$$F=G\frac{m_1m_2}{r^2}$$
   
   where:
   

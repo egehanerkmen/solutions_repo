@@ -16,25 +16,28 @@ We begin by generating large synthetic populations using three distinct probabil
 
 ### 📌 Selected Distributions:
 
-- **Uniform Distribution** $U(a,b)$
+- **Uniform Distribution**$U(a,b)$
 
-- **Exponential Distribution** $\text{Exp}(\lambda)$
+- **Exponential Distribution**$\text{Exp}(\lambda)$
 
-- **Binomial Distribution** $\text{Bin}(n,p)$
+- **Binomial Distribution**$\text{Bin}(n,p)$
 
 ### 🧮 Mathematical Definitions:
 
 - **Uniform Distribution**:
+  
 $$
 f(x)=\frac{1}{b-a},\quad x\in[a,b]
 $$
 
 - **Exponential Distribution**:
+  
 $$
 f(x)=\lambda e^{-\lambda x},\quad x\geq0
 $$
 
 - **Binomial Distribution**:
+  
 $$
 P(X=k)=\binom{n}{k}p^k(1-p)^{n-k},\quad k=0,1,\dots,n
 $$
@@ -148,6 +151,7 @@ The Central Limit Theorem has **powerful real-world applications**, especially w
 
 - **📏 Estimation Techniques**:
 - Enables constructing **confidence intervals** for unknown population means:
+  
 $$
 \bar{x} \pm z^* \cdot \frac{\sigma}{\sqrt{n}}
 $$

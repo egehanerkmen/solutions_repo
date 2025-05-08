@@ -172,6 +172,188 @@
 <div class="document" itemscope="itemscope" itemtype="http://schema.org/Article" role="main">
 <div class="section" itemprop="articleBody">
 <h1 id="problem-1">Problem 1</h1>
+<h1 id="exploring-the-central-limit-theorem-through-simulations">📊 Exploring the Central Limit Theorem through Simulations</h1>
+<h2 id="objective">🎯 Objective</h2>
+<p>To understand how the <strong>Central Limit Theorem (CLT)</strong> works in practice by simulating sampling distributions from different population distributions.</p>
+<hr/>
+<h2 id="1-defining-population-distributions">1️⃣ Defining Population Distributions</h2>
+<p>We begin by generating large synthetic populations using three distinct probability distributions:</p>
+<h3 id="selected-distributions">📌 Selected Distributions:</h3>
+<ul>
+<li>
+<p><strong>Uniform Distribution</strong> <span class="arithmatex">\(U(a,b)\)</span></p>
+</li>
+<li>
+<p><strong>Exponential Distribution</strong> <span class="arithmatex">\(\text{Exp}(\lambda)\)</span></p>
+</li>
+<li>
+<p><strong>Binomial Distribution</strong> <span class="arithmatex">\(\text{Bin}(n,p)\)</span></p>
+</li>
+</ul>
+<h3 id="mathematical-definitions">🧮 Mathematical Definitions:</h3>
+<ul>
+<li>
+<p><strong>Uniform Distribution</strong>:
+$$
+f(x)=\frac{1}{b-a},\quad x\in[a,b]
+$$</p>
+</li>
+<li>
+<p><strong>Exponential Distribution</strong>:
+$$
+f(x)=\lambda e^{-\lambda x},\quad x\geq0
+$$</p>
+</li>
+<li>
+<p><strong>Binomial Distribution</strong>:
+$$
+P(X=k)=\binom{n}{k}p^k(1-p)^{n-k},\quad k=0,1,\dots,n
+$$</p>
+</li>
+</ul>
+<h3 id="visuals-for-populations">🧪 Visuals for Populations:</h3>
+<h2 id="_1"><img alt="image" src="https://github.com/user-attachments/assets/de3b1c61-5a8d-493b-8e2d-e4fe6cc3aacb"/></h2>
+<h2 id="3-creating-sampling-distributions">3️⃣ Creating Sampling Distributions</h2>
+<p>To observe the Central Limit Theorem (CLT) in action, we construct <strong>sampling distributions of the sample mean</strong>.</p>
+<h3 id="procedure">🔁 Procedure</h3>
+<ul>
+<li>
+<p>For each selected sample size <span class="arithmatex">\(n \in \{5,10,30,50\}\)</span>:</p>
+</li>
+<li>
+<p>Randomly draw <span class="arithmatex">\(n\)</span> values from the population <strong>with replacement</strong> (or without, if the population is large).</p>
+</li>
+<li>
+<p>Calculate the sample mean <span class="arithmatex">\(\bar{x}\)</span>.</p>
+</li>
+<li>
+<p>Repeat this process <span class="arithmatex">\(M=1000\)</span> times to form a <strong>sampling distribution of the mean</strong>.</p>
+</li>
+</ul>
+<h3 id="formula-for-sample-mean">🧮 Formula for Sample Mean</h3>
+<p>For a sample of size <span class="arithmatex">\(n\)</span> with observations <span class="arithmatex">\(x_1,x_2,\dots,x_n\)</span>, the sample mean is given by:</p>
+<div class="arithmatex">\[
+\bar{x}=\frac{1}{n}\sum_{i=1}^{n}x_i
+\]</div>
+<h3 id="visuals-for-sampling-distributions">🧪 Visuals for Sampling Distributions</h3>
+<h2 id="_2"><img alt="image" src="https://github.com/user-attachments/assets/615d21fa-106b-4163-b379-0e3f13c6649d"/></h2>
+<h2 id="_3"><img alt="image" src="https://github.com/user-attachments/assets/c13d862b-7dd2-43c9-a40c-2a58b383b6e5"/></h2>
+<h2 id="_4"><img alt="image" src="https://github.com/user-attachments/assets/1f2d75b3-3299-4776-9c2f-3c49628489c7"/></h2>
+<h2 id="5-exploring-parameters-of-the-central-limit-theorem">5️⃣ Exploring Parameters of the Central Limit Theorem</h2>
+<p>This section examines how different <strong>parameters</strong> influence the behavior of the sampling distributions.</p>
+<hr/>
+<h3 id="key-questions">🔍 Key Questions:</h3>
+<ul>
+<li>How does the <strong>shape</strong> of the original distribution affect convergence?</li>
+<li>How does the <strong>sample size</strong> influence the approach to normality?</li>
+<li>How does the <strong>population variance</strong> affect the <strong>spread</strong> of the sampling distribution?</li>
+</ul>
+<hr/>
+<h3 id="theoretical-expectations">🧠 Theoretical Expectations:</h3>
+<h4 id="original-distribution-shape">📌 Original Distribution Shape</h4>
+<ul>
+<li>
+<p>The CLT states that the sampling distribution of the mean <span class="arithmatex">\(\bar{x}\)</span> 
+approaches a <strong>normal distribution</strong> regardless of the population’s shape, provided that:</p>
+</li>
+<li>
+<p>The sample size is <strong>sufficiently large</strong>.</p>
+</li>
+<li>
+<p>The population has <strong>finite mean and variance</strong>.</p>
+</li>
+</ul>
+<h4 id="sample-size-and-normality">📌 Sample Size and Normality</h4>
+<ul>
+<li>
+<p>Larger sample sizes <span class="arithmatex">\(n\)</span> cause:</p>
+</li>
+<li>
+<p>Smoother and more symmetric sampling distributions.</p>
+</li>
+<li>
+<p>Faster convergence toward the <strong>normal distribution</strong>.</p>
+</li>
+<li>
+<p><strong>Rule of thumb</strong>:</p>
+</li>
+<li>
+<p><span class="arithmatex">\(n \geq 30\)</span> is often enough for skewed distributions.</p>
+</li>
+</ul>
+<h4 id="population-variance-and-spread">📌 Population Variance and Spread</h4>
+<ul>
+<li>The variance of the sampling distribution is:</li>
+</ul>
+<div class="arithmatex">\[
+\sigma_{\bar{x}}^2 = \frac{\sigma^2}{n}
+\]</div>
+<ul>
+<li>
+<p>As sample size <span class="arithmatex">\(n\)</span> increases:</p>
+</li>
+<li>
+<p>The <strong>standard error</strong> decreases.</p>
+</li>
+<li>
+<p>The <strong>spread</strong> of the sampling distribution becomes <strong>narrower</strong>.</p>
+</li>
+</ul>
+<hr/>
+<h3 id="empirical-observations-from-simulation">🧪 Empirical Observations from Simulation</h3>
+<ul>
+<li>
+<p><strong>Uniform</strong> distribution converges rapidly — already bell-shaped at <span class="arithmatex">\(n=10\)</span>.</p>
+</li>
+<li>
+<p><strong>Exponential</strong> distribution (skewed) requires larger <span class="arithmatex">\(n\)</span> to become symmetric.</p>
+</li>
+<li>
+<p><strong>Binomial</strong> distribution shows quick convergence for <span class="arithmatex">\(n \geq 30\)</span> due to its discrete nature.</p>
+</li>
+</ul>
+<hr/>
+<h2 id="6-drawing-practical-conclusions">6️⃣ Drawing Practical Conclusions</h2>
+<p>The Central Limit Theorem has <strong>powerful real-world applications</strong>, especially when working with <strong>sample statistics</strong>.</p>
+<hr/>
+<h3 id="applications-in-practice">🛠 Applications in Practice</h3>
+<ul>
+<li><strong>📏 Estimation Techniques</strong>:</li>
+<li>
+<p>Enables constructing <strong>confidence intervals</strong> for unknown population means:
+$$
+\bar{x} \pm z^* \cdot \frac{\sigma}{\sqrt{n}}
+$$</p>
+</li>
+<li>
+<p><strong>🏭 Quality Assurance</strong>:</p>
+</li>
+<li>
+<p>Detecting shifts in production processes using sample means.</p>
+</li>
+<li>
+<p>Central to <strong>control charts</strong> and <strong>Six Sigma</strong> methods.</p>
+</li>
+<li>
+<p><strong>💸 Financial Predictions</strong>:</p>
+</li>
+<li>Estimating returns on portfolios.</li>
+<li>Risk analysis based on sampling distributions of historical data.</li>
+</ul>
+<hr/>
+<h3 id="summary-points">✅ Summary Points</h3>
+<ul>
+<li>
+<p>The <strong>CLT bridges the gap</strong> between unknown population distributions and practical inferential tools.</p>
+</li>
+<li>
+<p>Even with <strong>non-normal</strong> populations, we can make reliable predictions using the <strong>sample mean</strong>.</p>
+</li>
+<li>
+<p>Understanding how <strong>sample size and variance</strong> affect results is essential for <strong>sound statistical practice</strong>.</p>
+</li>
+</ul>
+<hr/>
 </div>
 </div><footer>
 <div aria-label="Footer Navigation" class="rst-footer-buttons" role="navigation">

@@ -45,11 +45,13 @@ We now implement a simple Monte Carlo simulation in Python to estimate $\pi$ usi
 - Estimate $\pi$ using the formula:
 
 $$\pi \approx 4 \cdot \frac{M}{N}$$
---
+
+---
 
 ![monte_carlo_pi_estimation_final](https://github.com/user-attachments/assets/0446c7aa-aa04-4f69-8701-fb81f4b73753)
 
---
+---
+
 ![image](https://github.com/user-attachments/assets/0d7dea3c-ef36-4beb-b59e-e85dc3862e00)
 
 

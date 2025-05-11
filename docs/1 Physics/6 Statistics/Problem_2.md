@@ -380,7 +380,7 @@ def estimate_pi(num_points=10000, show_plot=True, save_plot=False, filename="pi_
 # Example run
 estimate_pi(num_points=100000)
 ```
---
+---
 
 ```python
 import numpy as np
@@ -440,7 +440,7 @@ def monte_carlo_pi_convergence(sample_sizes=None):
 # Run the function
 monte_carlo_pi_convergence()
 ```
---
+---
 
 
 ```python
@@ -508,7 +508,7 @@ ani.save("buffon_creative_simulation.gif", writer='pillow', fps=10)
 from IPython.display import Image
 Image(filename="buffon_creative_simulation.gif")
 ```
---
+---
 
 
 ```python
@@ -601,7 +601,7 @@ axs[1, 1].grid(True)
 plt.tight_layout()
 plt.show()
 ```
---
+---
 
 
 ```python

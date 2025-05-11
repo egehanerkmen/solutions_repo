@@ -47,6 +47,9 @@ We now implement a simple Monte Carlo simulation in Python to estimate $\pi$ usi
 $$\pi \approx 4 \cdot \frac{M}{N}$$
 --
 
+![monte_carlo_pi_estimation_final](https://github.com/user-attachments/assets/0446c7aa-aa04-4f69-8701-fb81f4b73753)
+
+--
 ![image](https://github.com/user-attachments/assets/0d7dea3c-ef36-4beb-b59e-e85dc3862e00)
 
 
@@ -55,8 +58,6 @@ $$\pi \approx 4 \cdot \frac{M}{N}$$
 
 ## 3. Visualization
 
-![monte_carlo_pi_estimation_final](https://github.com/user-attachments/assets/7855888e-70cb-4471-9596-883d3dff762f)
---
 
 ![image](https://github.com/user-attachments/assets/7380f24a-5ac3-477a-9050-fa9da705ff2f)
 --

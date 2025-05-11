@@ -62,7 +62,8 @@ $$\pi \approx 4 \cdot \frac{M}{N}$$
 
 
 ![image](https://github.com/user-attachments/assets/7380f24a-5ac3-477a-9050-fa9da705ff2f)
---
+
+---
 
 Visualizing the simulation helps to intuitively understand how Monte Carlo methods work in approximating π.
 
@@ -133,7 +134,8 @@ $$\text{Error} = \left| \pi_{\text{estimate}} - \pi \right|$$
 ---
 
 > 📈 Monte Carlo π estimation beautifully illustrates the trade-off between **accuracy**, **sample size**, and **computational cost**.
---
+
+---
 
 
 # Part 2: Estimating $\pi$ Using Buffon’s Needle
@@ -184,7 +186,8 @@ $$
 ## 2. Simulation
 
 ![buffon_creative_simulation](https://github.com/user-attachments/assets/a3b329e0-9e52-42f8-b496-024f36e4669c)
---
+
+---
 
 
 We simulate the dropping of needles on a floor to estimate $\pi$ using the above formula.
@@ -230,12 +233,14 @@ $$
 ---
 
 > 🧪 Buffon’s Needle is a beautiful example of how geometry and probability can be combined to approximate mathematical constants like $\pi$.
---
+
+---
 
 ## 3. Visualization
 
 ![image](https://github.com/user-attachments/assets/639d2a7c-22f1-435c-81ee-2233b9036737)
---
+
+---
 
 
 To visually demonstrate the geometric basis of Buffon’s Needle experiment, we plot the needle positions over a floor of equally spaced parallel lines.
